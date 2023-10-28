@@ -21,7 +21,7 @@ public class Lab3P1_AndreHechenbichler {
         System.out.println("2 para pocket monsters");
         System.out.println("3 para figura");
         int opcion=leer.nextInt();
-        if(opcion<=3&&opcion>0){
+        while(opcion<=3&&opcion>0){
             switch(opcion){
                 case 1:{
                         System.out.print("Inserte la diferencia entre los numeros: ");
@@ -63,16 +63,16 @@ public class Lab3P1_AndreHechenbichler {
                     int ata3=70;
                     int ata4=75;
                     System.out.println("Estadistica de los pokemones");
-                            System.out.println("Sylveon Vida:280 Ataque:80 Defensa:15%");
-                            System.out.println("Gyarados Vida:300 Ataque:50 Defensa:10%");
-                            System.out.println("Girantina Vida:300 Ataque:70 Defensa:25%");
-                            System.out.println("Dragonite Vida:250 Ataque:75 Defensa:20%");
+                            System.out.println("Vaporeon Vida:280 Ataque:80 Defensa:15%");
+                            System.out.println("caterpie Vida:300 Ataque:50 Defensa:10%");
+                            System.out.println("Rayquaza Vida:300 Ataque:70 Defensa:25%");
+                            System.out.println("weedle Vida:250 Ataque:75 Defensa:20%");
                             System.out.println("");
                             System.out.println("Ingrese una pelea predeterminada");
-                            System.out.println("1.- Sylveon vrs Dragonite");
-                            System.out.println("2.- Gyarados vrs Girantina");
-                            System.out.println("3.- Dragonite vrs Girantina");
-                            System.out.println("4.- Girantina vrs Sylveon");
+                            System.out.println("1.- Vaporeon vrs Weedle");
+                            System.out.println("2.- Caterpie vrs Rayquaza");
+                            System.out.println("3.- Weedle vrs Rayquaza");
+                            System.out.println("4.- Rayquaza vrs Vaporeon");
                             int pelea=leer.nextInt();
                             switch(tipo){
                                 case 1:{
@@ -239,10 +239,10 @@ public class Lab3P1_AndreHechenbichler {
                                              }
                                              else if(vid1==0){
                                                  System.out.println("Pokemon 2 a ganado");
-                                            }
+                                            break;}
                                              else if(vid4==0){
                                                  System.out.println("Pokemon 1 a ganado");
-                                             }
+                                             break;}
                                              cont=cont+1;
                                              System.out.println("");
                                             }
@@ -271,10 +271,10 @@ public class Lab3P1_AndreHechenbichler {
                                              }
                                              else if(vid2==0){
                                                  System.out.println("Pokemon 2 a ganado");
-                                            }
+                                            break;}
                                              else if(vid3==0){
                                                  System.out.println("Pokemon 1 a ganado");
-                                             }
+                                             break;}
                                              cont=cont+1;
                                              System.out.println("");
                                             }
@@ -303,10 +303,10 @@ public class Lab3P1_AndreHechenbichler {
                                              }
                                              else if(vid4==0){
                                                  System.out.println("Pokemon 2 a ganado");
-                                            }
+                                            break;}
                                              else if(vid3==0){
                                                  System.out.println("Pokemon 1 a ganado");
-                                             }
+                                             break;}
                                              cont=cont+1;
                                              System.out.println("");
                                             }
@@ -335,10 +335,10 @@ public class Lab3P1_AndreHechenbichler {
                                              }
                                              else if(vid3==0){
                                                  System.out.println("Pokemon 2 a ganado");
-                                            }
+                                            break;}
                                              else if(vid1==0){
                                                  System.out.println("Pokemon 1 a ganado");
-                                             }
+                                             break;}
                                              cont=cont+1;
                                              System.out.println("");
                                             }
@@ -353,14 +353,39 @@ public class Lab3P1_AndreHechenbichler {
                     int num=leer.nextInt();
                     int result=num%2;
                     if(num>=7&&result==1){
-                        for(int i=0;i<)
+                        for(int i=1;i<=num;i++){
+                            for(int j=1;j<=num;j++){
+                                if(i==1||i==num||j==1||j==num){
+                                    System.out.print(" * ");
+                                }
+                                else if(j==(num/2)+1){
+                                    System.out.print(" | ");
+                                }
+                                else if(i+j==num+1){
+                                    System.out.print(" > ");
+                                }
+                                else if(i==j){
+                                    System.out.print(" > ");
+                                }
+                                else{
+                                    System.out.print("   ");
+                                }
+                            }
+                            System.out.println("");
+                        }   
                     }
+                    else{
+                        System.out.println("El numero debe se impar y mayor que 7");
                 }
-                }// fin switch general
-                    
-                
-            }
+                    System.out.println("");
+                }
+            }       
+            System.out.println("***MENU***");
+            System.out.println("1 para succesiones");
+            System.out.println("2 para pocket monsters");
+            System.out.println("3 para figura");
+            opcion=leer.nextInt();   
+            }// fin switch general
         }
-        
     }
     
